@@ -1,4 +1,4 @@
-#Ball balacing with PID control
+# Ball balacing with PID control
 
 This project aims to create a control system to keep a ball balanced on a tiltable surface. Using a webcam to detect the ball's position and two servo motors located perpendicularly, we implemented a PID control to adjust the surface tilt and keep the ball in the desired position. As of now, the project is a work in progress.
 
