@@ -30,7 +30,7 @@ while True:
         error = np.array((-1, -1))    
 
     ser.write(f'<{error[0]}, {error[1]}>'.encode()) #Data sent as '<error_x, error_y>'
-    
+        
     print(ball_pos)
     print(error, '\n')
     if (cv2.waitKey(1) & 0xFF) == ord('q'):

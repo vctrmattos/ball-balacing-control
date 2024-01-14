@@ -1,4 +1,4 @@
-// Example 5 - Receive with start- and end-markers combined with parsing
+#include "ParsingUtils.h"
 
 const byte numChars = 32;
 char receivedChars[numChars];
@@ -9,29 +9,6 @@ float ballPosx = 0;
 float ballPosy = 0;
 
 boolean newData = false;
-
-//============
-
-void setup() {
-    Serial.begin(9600);
-    Serial.println();
-}
-
-//============
-
-void loop() {
-    recvWithStartEndMarkers();
-    if (newData == true) {
-        strcpy(tempChars, receivedChars);
-            // this temporary copy is necessary to protect the original data
-            //   because strtok() used in parseData() replaces the commas with \0
-        parseData();
-        showParsedData();
-        newData = false;
-    }
-}
-
-//============
 
 void recvWithStartEndMarkers() {
     static boolean recvInProgress = false;
